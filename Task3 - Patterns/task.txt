@@ -1,0 +1,24 @@
+Decorator.
+
+Create a PersonOutputStream that implements the writePerson(Person) method and can decorate any given OutputStream.
+Create a PersonOutputStream that implements the readPerson() method that returns a Person and can decorate any given InputStream.
+The PersonOutputStream decorator must check if the name of the person starts with a capital letter and if it doesn't – it should update it before writing it to the destination.
+The PersonInputStream decorator must check if the name of the person starts with a low letter and if it doesn’t – it should update it before writing it to the destination.
+Write a program that uses the two decorators to write and read persons to and from a file
+
+
+
+Visitor.
+
+Create an Employee class with the following attributes:
+      - Name
+      - Salary
+      - Department
+Create  a Company class that holds a collection of Employees
+Company must provide the following:
+      - Total salaries computation
+      - Number of employees
+      - Average salary
+     - Number of employees per department
+     - Salary raise (by percent)
+Implement all Company activities via Visitors
