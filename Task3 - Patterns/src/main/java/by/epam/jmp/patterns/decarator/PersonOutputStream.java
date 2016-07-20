@@ -6,7 +6,7 @@ import java.io.OutputStream;
 /**
  * Created by Gambit on 7/19/2016.
  */
-public class PersonOutputStream {
+public class PersonOutputStream extends OutputStream {
     private OutputStream stream;
 
     public PersonOutputStream(OutputStream stream) {
@@ -14,9 +14,12 @@ public class PersonOutputStream {
     }
 
     public void writePerson(Person person) throws IOException {
-        // todo: add outputStream contract???
         stream.write(person.toString().getBytes());
         stream.flush();
         stream.close();
+    }
+
+    public void write(int b) throws IOException {
+        stream.write(b);
     }
 }

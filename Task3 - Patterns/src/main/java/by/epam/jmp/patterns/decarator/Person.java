@@ -1,9 +1,13 @@
 package by.epam.jmp.patterns.decarator;
 
+import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
+
 /**
  * Created by Gambit on 7/19/2016.
  */
 public class Person {
+    private static final String SEPARATOR = ";";
     private String name;
     private int age;
 
@@ -15,43 +19,32 @@ public class Person {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+    public static Person fromString(String string) {
+        String[] params = string.split(SEPARATOR);
+        return new Person(params[0], Integer.parseInt(params[1]));
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
-        Person person = (Person) o;
-
-        if (age != person.age) return false;
-        return name.equals(person.name);
-
+        final Person other = (Person) o;
+        return new EqualsBuilder()
+                .append(age, other.age)
+                .append(name, other.name)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + age;
-        return result;
+        return new HashCodeBuilder()
+                .append(name)
+                .append(age)
+                .hashCode();
     }
 
     @Override
     public String toString() {
-        return name + ";" + age;
+        return name + SEPARATOR + age;
     }
 }
