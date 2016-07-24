@@ -1,5 +1,6 @@
 package by.epam.jmp.patterns.decarator;
 
+import by.epam.jmp.patterns.beans.Person;
 import org.apache.commons.lang.ArrayUtils;
 
 import java.io.IOException;

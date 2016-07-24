@@ -1,8 +1,6 @@
 package by.epam.jmp.patterns.decarator;
 
-import by.epam.jmp.patterns.decarator.Person;
-import by.epam.jmp.patterns.decarator.PersonInputStream;
-import by.epam.jmp.patterns.decarator.PersonOutputStream;
+import by.epam.jmp.patterns.beans.Person;
 import org.junit.Test;
 
 import java.io.File;
