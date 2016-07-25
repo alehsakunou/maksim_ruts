@@ -5,7 +5,6 @@ import by.epam.jmp.patterns.beans.Person;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 /**
  * Created by Gambit on 7/24/2016.

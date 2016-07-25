@@ -15,21 +15,16 @@ public class FilePersonDao implements PersonDao {
     private PersonInputStream inputStream;
     private PersonOutputStream outputStream;
 
-    public FilePersonDao(String filename) {
-        // todo
-        try {
-            inputStream = new PersonInputStream(new FileInputStream(new File(filename)));
-            outputStream = new PersonOutputStream(new FileOutputStream(new File(filename)));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+    public FilePersonDao(PersonInputStream pis, PersonOutputStream pos) {
+        inputStream = pis;
+        outputStream = pos;
     }
 
     public void save(Person person) {
         try {
             outputStream.writePerson(person);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new PersistenceException(e);
         }
     }
 

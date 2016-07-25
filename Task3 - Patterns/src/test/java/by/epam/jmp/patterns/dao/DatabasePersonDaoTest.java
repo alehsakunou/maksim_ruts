@@ -18,7 +18,7 @@ public class DatabasePersonDaoTest {
     }
 
     @Test
-    public void nameSome() throws Exception {
+    public void testDaoFlow() throws Exception {
         PersonDao dao = AbstractPersonDaoFactory.getFactory(DatabasePersonDaoFactory.class).getPersonDao();
         Person person = new Person("Jack", 10);
         dao.save(person);

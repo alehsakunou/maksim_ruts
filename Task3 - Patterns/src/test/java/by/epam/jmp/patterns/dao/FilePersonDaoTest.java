@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
  */
 public class FilePersonDaoTest {
     @Test
-    public void testSome() throws Exception {
+    public void testDaoFlow() throws Exception {
         PersonDao dao = AbstractPersonDaoFactory.getFactory(FilePersonDaoFactory.class).getPersonDao();
         Person person = new Person("Jack", 10);
         dao.save(person);
