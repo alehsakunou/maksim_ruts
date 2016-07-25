@@ -19,6 +19,22 @@ public class Person {
         this.age = age;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public static Person fromString(String string) {
         String[] params = string.split(SEPARATOR);
         return new Person(params[0], Integer.parseInt(params[1]));

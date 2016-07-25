@@ -11,6 +11,10 @@
 
     <artifactId>task3.patterns</artifactId>
 
+    <properties>
+        <derby.version>10.10.1.1</derby.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -22,7 +26,17 @@
             <artifactId>commons-lang</artifactId>
             <version>2.3</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>${derby.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbyclient</artifactId>
+            <version>${derby.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

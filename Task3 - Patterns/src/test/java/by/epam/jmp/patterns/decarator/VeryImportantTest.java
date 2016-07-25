@@ -24,7 +24,7 @@ public class VeryImportantTest {
         PersonOutputStream pos = new PersonOutputStream(fos);
         pos.writePerson(donor);
 
-        FileInputStream fis = new FileInputStream(new File("out.txt"));
+        FileInputStream fis = new FileInputStream(new File(OUT_FILE));
         PersonInputStream pis = new PersonInputStream(fis);
         Person clone = pis.readPerson();
 
