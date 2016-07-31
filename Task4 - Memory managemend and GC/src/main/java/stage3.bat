@@ -1,0 +1,1 @@
+java -XX:SurvivorRatio=3 -Xms640m -Xmx640m -Xmn512m -XX:TLABSize=1m by.epam.jmp.memory.Application
