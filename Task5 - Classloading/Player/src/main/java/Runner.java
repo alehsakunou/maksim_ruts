@@ -16,34 +16,36 @@ public class Runner {
     private static final String CONSOLE_HELP = "help";
     private static final String CONSOLE_CLOSE = "close";
 
-    private static String PLAYER_ANDROID = "D:\\Projects\\Java\\jmpRepo\\maksim_ruts\\Task5 - Classloading\\Player for Android\\target\\player.android-1.0.jar";
-    private static String PLAYER_WINDOWS = "D:\\Projects\\Java\\jmpRepo\\maksim_ruts\\Task5 - Classloading\\Player for Windows\\target\\player.windows-1.0.jar";
-    private static String PLAYER_IOS = "D:\\Projects\\Java\\jmpRepo\\maksim_ruts\\Task5 - Classloading\\Player for IOS\\target\\player.ios-1.0.jar";
+    private static String DIR = System.getProperty("user.dir");
+    private static String PLAYER_ANDROID = DIR + "\\Task5 - Classloading\\Player for Android\\target\\player.android-1.0.jar";
+    private static String PLAYER_WINDOWS = DIR + "\\Task5 - Classloading\\Player for Windows\\target\\player.windows-1.0.jar";
+    private static String PLAYER_IOS = DIR + "\\Task5 - Classloading\\Player for IOS\\target\\player.ios-1.0.jar";
 
     public static void main(String[] args) throws Exception {
         System.out.println(
                 MessageFormat.format("Cross-platform media player started!!! Enter ''{0}'' " +
                         "for list of commands", CONSOLE_HELP));
-        Scanner scanner = new Scanner(System.in);
-        while (scanner.hasNextLine()) {
-            String s = scanner.nextLine();
-            System.out.println(SEPARATOR);
-            if (CONSOLE_CLOSE.equals(s)) {
-                break;
-            } else if (CONSOLE_HELP.equals(s)) {
-                help();
-            } else if (CONSOLE_PLAY_WINDOWS.equals(s)) {
-                playWin();
-            } else if (CONSOLE_PLAY_IOS.equals(s)) {
-                playIos();
-            } else if (CONSOLE_PLAY_ANDROID.equals(s)) {
-                playDroid();
-            } else {
-                System.out.println("ooops!! wrong command");
+        try (Scanner scanner = new Scanner(System.in)) {
+            while (scanner.hasNextLine()) {
+                String s = scanner.nextLine();
+                System.out.println(SEPARATOR);
+                if (CONSOLE_CLOSE.equals(s)) {
+                    break;
+                } else if (CONSOLE_HELP.equals(s)) {
+                    help();
+                } else if (CONSOLE_PLAY_WINDOWS.equals(s)) {
+                    playWin();
+                } else if (CONSOLE_PLAY_IOS.equals(s)) {
+                    playIos();
+                } else if (CONSOLE_PLAY_ANDROID.equals(s)) {
+                    playDroid();
+                } else {
+                    System.out.println("ooops!! wrong command");
+                }
             }
         }
+
         System.out.println("See you later!!!");
-        scanner.close();
     }
 
     private static void help() {
