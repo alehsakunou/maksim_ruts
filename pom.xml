@@ -12,6 +12,7 @@
         <module>Task1 - Architecture</module>
         <module>Task3 - Patterns</module>
         <module>Task5 - Classloading</module>
+        <module>Task7 - Multithreading</module>
     </modules>
 
 

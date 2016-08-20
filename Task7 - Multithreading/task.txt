@@ -1,16 +1,10 @@
-
-
 This is continuation of the task "Principle of software development. SOLID File share service".
-
 Implement the following use cases:
-
-
     Upload file.
-
     Download file.
 
+It should be possible to upload two or more files in parallel. It should be possible to download two or more files
+in parallel. Console commands or script should be provided to demonstrate the upload and download. No UI required.
 
-It should be possible to upload two or more files in parallel. It should be possible to download two or more files in parallel. Console commands or script should be provided to demonstrate the upload and download. No UI required.
-
-Code to interface: implement classes for uploading and downloading using classic multithreading model and then the same functionality using concurrency. Provide pros and cons of each approach.
-
+Code to interface: implement classes for uploading and downloading using classic multithreading model and then
+the same functionality using concurrency. Provide pros and cons of each approach.

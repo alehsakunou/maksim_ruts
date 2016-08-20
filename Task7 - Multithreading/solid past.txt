@@ -1,6 +1,7 @@
 1 REQUIREMENTS
 
-Develop a skeleton of modular web-app with proven appliance of SOLID and SoC (Separation of Concerns) principles. Keeping in mind KISS and DRY.
+Develop a skeleton of modular web-app with proven appliance of SOLID and SoC (Separation of Concerns) principles.
+Keeping in mind KISS and DRY.
 
 1.1 ARCHITECTURAL
 
@@ -29,15 +30,16 @@ An application is a file share service. For the first version, it is possible to
 It is possible that several users upload or download files simultaneously.
 
 Use cases:
-• Files list view.
-• File access via direct link.
-• Upload/download of a file.
-• File expiration.
+ï¿½ Files list view.
+ï¿½ File access via direct link.
+ï¿½ Upload/download of a file.
+ï¿½ File expiration.
 
 1.3 DOCUMENTATION
 
 Interfaces should be properly commented while code itself should be readable. 
-For evaluation of principles application, a short report should be created. In a report should be examples or names of classes that prove the principle.
+For evaluation of principles application, a short report should be created. In a report should be examples or names
+of classes that prove the principle.
 Block diagram of the application to be developed.
 Use case diagram of the application to be developed.
 Major interfaces should be shown on the class diagram.
@@ -47,4 +49,4 @@ Major interfaces should be shown on the class diagram.
 Acceptance criteria for the task:
 
 1. Demo of the skeleton using documentation and code review.
-2. App up and running on Mentor’s machine.
+2. App up and running on Mentorï¿½s machine.
