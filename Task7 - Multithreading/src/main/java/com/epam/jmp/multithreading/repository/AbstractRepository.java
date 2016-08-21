@@ -1,4 +1,4 @@
-package com.epam.jmp.multithreading;
+package com.epam.jmp.multithreading.repository;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -10,12 +10,13 @@ import java.util.List;
 
 /**
  * Created by Gambit on 8/20/2016.
+ * Abstract implementation of Repository interface
  */
 public abstract class AbstractRepository implements Repository {
     private static final Logger LOGGER = LogManager.getLogger();
     private final String path;
 
-    public AbstractRepository(String path) {
+    protected AbstractRepository(String path) {
         this.path = path;
     }
 
@@ -32,8 +33,6 @@ public abstract class AbstractRepository implements Repository {
         }
     }
 
-    protected abstract void load(RepositoryDownloader downloader);
-
     @Override
     public void saveAsync(String filename, InputStream is) {
         try {
@@ -47,8 +46,6 @@ public abstract class AbstractRepository implements Repository {
         }
     }
 
-    protected abstract void save(RepositoryDownloader downloader);
-
     @Override
     public List<String> files() {
         List<String> files = new ArrayList<>();
@@ -56,12 +53,16 @@ public abstract class AbstractRepository implements Repository {
         return files;
     }
 
-    @Override
-    public abstract void close();
-
     protected File getResultFile(String filename) {
         File output;
         output = new File(path + File.separator + filename);
         return output;
     }
+
+    protected abstract void load(RepositoryDownloader downloader);
+
+    protected abstract void save(RepositoryDownloader downloader);
+
+    @Override
+    public abstract void close();
 }

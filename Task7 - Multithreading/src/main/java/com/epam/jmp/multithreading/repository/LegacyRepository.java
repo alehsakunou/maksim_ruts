@@ -1,15 +1,16 @@
-package com.epam.jmp.multithreading;
+package com.epam.jmp.multithreading.repository;
 
 /**
  * Created by Gambit on 8/20/2016.
+ * Legacy implementation of repository
  */
 public class LegacyRepository extends AbstractRepository {
-    // todo
-    private final ThreadGroup threadGroup;
-
+    /**
+     * Create legacy repository
+     * @param path path to folder for repository
+     */
     public LegacyRepository(String path) {
         super(path);
-        threadGroup = new ThreadGroup("Legacy downloaders team");
     }
 
     @Override

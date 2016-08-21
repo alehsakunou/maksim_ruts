@@ -1,4 +1,4 @@
-package com.epam.jmp.multithreading;
+package com.epam.jmp.multithreading.repository;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
