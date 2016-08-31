@@ -1,4 +1,4 @@
-package com.epam.jmp.spring.model.daoMemory;
+package com.epam.jmp.spring.model.daomemory;
 
 import com.epam.jmp.spring.model.domain.User;
 import org.junit.Before;
@@ -8,13 +8,19 @@ import static org.junit.Assert.*;
 
 /**
  * Created by Gambit on 8/31/2016.
+ * Test for Abstract Dao
  */
 public class AbstractDaoImplTest {
-    private AbstractDaoImpl<User> abstractDao;
+    private AbstractGenericDaoImpl<User> abstractDao;
 
     @Before
     public void setUp() throws Exception {
-        abstractDao = new AbstractDaoImpl<User>() {};
+        abstractDao = new AbstractGenericDaoImpl<User>() {
+            @Override
+            protected Class<User> getType() {
+                return User.class;
+            }
+        };
     }
 
     @Test

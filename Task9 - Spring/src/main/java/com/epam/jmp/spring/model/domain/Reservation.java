@@ -3,12 +3,14 @@ package com.epam.jmp.spring.model.domain;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
  * Created by Gambit on 8/31/2016.
+ * Domain reservation object
  */
 public class Reservation extends DomainObject {
     private String number;
@@ -101,7 +103,7 @@ public class Reservation extends DomainObject {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
+        return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
                 .append("number", number)
                 .append("movie", movie)
                 .append("dateTime", dateTime)

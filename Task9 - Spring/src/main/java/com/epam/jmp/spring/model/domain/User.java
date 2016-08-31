@@ -3,9 +3,11 @@ package com.epam.jmp.spring.model.domain;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Created by Gambit on 8/31/2016.
+ * Domain user object
  */
 public class User extends DomainObject {
     private String firstName;
@@ -59,7 +61,7 @@ public class User extends DomainObject {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
+        return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
                 .append("firstName", firstName)
                 .append("lastName", lastName)
                 .toString();

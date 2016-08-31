@@ -12,6 +12,7 @@
         <spring.version>4.3.2.RELEASE</spring.version>
         <junit.version>4.12</junit.version>
         <apache-commons.version>3.4</apache-commons.version>
+        <log4j.version>2.2</log4j.version>
     </properties>
 
     <artifactId>task9.spring</artifactId>
@@ -36,6 +37,16 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${apache-commons.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
         </dependency>
     </dependencies>
 
