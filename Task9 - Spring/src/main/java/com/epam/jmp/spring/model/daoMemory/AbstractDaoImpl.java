@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Created by Gambit on 8/31/2016.
  */
-public class AbstractDaoImpl<T extends DomainObject> implements GenericDao<Long, T> {
+public abstract class AbstractDaoImpl<T extends DomainObject> implements GenericDao<Long, T> {
     protected final Map<Long, T> BASE;
     private Long currentId;
 
