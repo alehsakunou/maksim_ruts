@@ -22,9 +22,9 @@ public class BookingFacadeImpl implements BookingFacade {
     private ReservationService reservationService;
 
     @Override
-    public User login(String firstName, String secondName) {
+    public User login(String firstName) {
         User userByName = userService.getUserByName(firstName);
-        return userByName == null ? userService.create(firstName, secondName) : userByName;
+        return userByName;
     }
 
     @Override
@@ -34,6 +34,6 @@ public class BookingFacadeImpl implements BookingFacade {
 
     @Override
     public String book(String firstName, String secondName, String movie, LocalDateTime dateTime, int seat, BigDecimal amount) {
-       return book(login(firstName, secondName), movie, dateTime, seat, amount);
+       return book(login(firstName), movie, dateTime, seat, amount);
     }
 }

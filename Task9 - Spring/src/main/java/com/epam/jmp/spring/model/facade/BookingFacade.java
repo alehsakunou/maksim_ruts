@@ -16,7 +16,7 @@ public interface BookingFacade {
      * @param secondName user last name
      * @return user domain object
      */
-    User login(String firstName, String secondName);
+    User login(String firstName);
 
     /**
      * Booking reservation
