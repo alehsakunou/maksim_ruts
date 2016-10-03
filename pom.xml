@@ -16,7 +16,7 @@
         <module>Task8 - Troubleshooting</module>
         <module>Task9 - Spring</module>
         <module>Task10 - JDBC</module>
-        <module>Task13 - Jenkins</module>
+        <module>Task13_Jenkins</module>
     </modules>
 
     <build>
