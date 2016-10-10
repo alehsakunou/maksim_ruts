@@ -1,0 +1,5 @@
+dependencies {
+    compile group: "javax.servlet", name: "javax.servlet-api", version: property('servlet-api.version')
+
+    compile project(':utils')
+}

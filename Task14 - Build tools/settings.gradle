@@ -1,0 +1,4 @@
+rootProject.name = 'com.epam.jmp'
+include 'service'
+include 'utils'
+
