@@ -17,6 +17,7 @@
         <module>Task9 - Spring</module>
         <module>Task10 - JDBC</module>
         <module>Task13_Jenkins</module>
+        <module>Task15 - NoSQL</module>
     </modules>
 
     <build>
