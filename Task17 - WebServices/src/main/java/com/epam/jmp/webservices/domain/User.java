@@ -11,6 +11,7 @@ import javax.persistence.Id;
 
 /**
  * Created by Maksim Ruts on 10/29/2016.
+ * User entity
  */
 @Getter
 @Setter

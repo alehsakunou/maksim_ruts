@@ -18,12 +18,17 @@ import java.util.Properties;
 
 /**
  * Created by Maksim Ruts on 10/29/2016.
+ * Settings for persistence configuration
  */
 @Configuration
 @ComponentScan("com.epam.jmp.webservices.repository")
 @EnableJpaRepositories("com.epam.jmp.webservices.repository")
 @EnableTransactionManagement
 public class PersistenceConfig {
+    /**
+     * Hibernate entity manager for entities management
+     * @return entity manager
+     */
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
@@ -35,6 +40,10 @@ public class PersistenceConfig {
         return em;
     }
 
+    /**
+     * DataSource for DB access
+     * @return data source
+     */
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -52,8 +61,13 @@ public class PersistenceConfig {
         return properties;
     }
 
+    /**
+     * Transactional manager
+     * @param emf Entity manager
+     * @return transactional manager
+     */
     @Bean
-    public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
+    public PlatformTransactionManager transactionManager(final EntityManagerFactory emf) {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(emf);
         return transactionManager;

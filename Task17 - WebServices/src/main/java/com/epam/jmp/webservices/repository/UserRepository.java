@@ -5,6 +5,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**
  * Created by Maksim Ruts on 10/29/2016.
+ * Spring Data user repository with pagination and sorting
  */
 public interface UserRepository extends PagingAndSortingRepository<User, Long> {
 }

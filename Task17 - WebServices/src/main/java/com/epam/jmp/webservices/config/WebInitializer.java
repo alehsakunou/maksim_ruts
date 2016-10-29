@@ -4,6 +4,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 /**
  * Created by Maksim Ruts on 10/29/2016.
+ * Web application initializer for Spring-context initialisation during deployment process
  */
 public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
