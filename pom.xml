@@ -19,6 +19,7 @@
         <module>Task13_Jenkins</module>
         <module>Task15 - NoSQL</module>
         <module>Task17 - WebServices</module>
+        <module>Task18 - JPA</module>
     </modules>
 
     <build>
